@@ -3,7 +3,7 @@ NHẬT KÝ PROMPT ENGINEERING (PROMPT LOG)
 Dự án: Thiết kế Website Quán Ăn Vặt "Ăn Cùng Chú Mập"
 
 Thành viên thực hiện: Học viên / Sinh viên : Đặng Duy Nhật
-
+Mssv 125001784
 Công cụ AI hỗ trợ: Gemini
 
 Tệp tài liệu: PROMPT_LOG.md
