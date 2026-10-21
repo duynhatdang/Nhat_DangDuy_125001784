@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ăn Cùng Chú Mập - Thiên Đường Đồ Ăn Vặt Biên Hòa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS Liên kết -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVBAR -->
+    <header>
+        <div class="logo">🐻 Ăn Cùng Chú Mập</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#about">Về Chú Mập</a></li>
+                <li><a href="#menu">Thực Đơn</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" id="cartBtn">
+            🛒 Giỏ Hàng (<span id="cartCount">0</span>)
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="sub-title">Hương vị đậm đà - Giao nhanh tận nhà</span>
+            <h1>Ăn Cùng Chú Mập</h1>
+            <p>Thỏa mãn đam mê ăn vặt với hàng loạt món ngon chuẩn vị, siêu sạch sẽ. Phục vụ tận tâm tại Thành Phố Biên Hòa!</p>
+            <a href="#menu" class="btn-primary">Khám Phá Menu Ngay</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>Về Chú Mập</h2>
+            <div class="divider">✦ ✦ ✦</div>
+            <p>Ngon miệng, sạch sẽ và trọn vẹn yêu thương</p>
+        </div>
+        <div class="about-container">
+            <div class="about-text">
+                <h3>Tiệm ăn vặt số 1 tại Biên Hòa</h3>
+                <p><strong>Ăn Cùng Chú Mập</strong> là điểm hẹn quen thuộc của các tín đồ ẩm thực đam mê đồ ăn vặt. Chúng tôi cam kết nguyên liệu tươi mới mỗi ngày, công thức nước sốt độc quyền đậm đà khó cưỡng.</p>
+                <p>Dù bạn thích lai rai chân gà giòn rụm, bánh tráng đậm vị hay nhâm nhi ly trà sữa thơm béo, Chú Mập đều sẵn sàng phục vụ bạn!</p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Đồ ăn vặt Chú Mập">
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu">
+        <div class="section-title">
+            <h2>Thực Đơn Hấp Dẫn</h2>
+            <div class="divider">✦ ✦ ✦</div>
+            <p>Món nào cũng ngon, chọn ngay kẻo lỡ</p>
+        </div>
+
+        <div class="menu-categories">
+            <button class="tab-btn active">Tất Cả</button>
+            <button class="tab-btn">Món Ăn Vặt</button>
+            <button class="tab-btn">Nước Uống</button>
+            <button class="tab-btn">Combo Tiết Kiệm</button>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Sản phẩm 1 -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <span class="badge hot">Bán Chạy</span>
+                    <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=500&q=80" alt="Bánh Tráng Trộn">
+                </div>
+                <div class="card-info">
+                    <h3>Bánh Tráng Trộn Sài Gòn</h3>
+                    <p>Bánh tráng dẻo, bò khô, trứng cút, rau răm và sốt tắc đậm đà.</p>
+                    <div class="price-action">
+                        <span class="price">25.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Bánh Tráng Trộn Sài Gòn', 25000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <span class="badge hot">Hot</span>
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=500&q=80" alt="Chân Gà Sả Tắc">
+                </div>
+                <div class="card-info">
+                    <h3>Chân Gà Rút Xương Sả Tắc</h3>
+                    <p>Chân gà giòn sần sật, ngấm vị chua ngọt cay dịu thơm mùi sả tắc.</p>
+                    <div class="price-action">
+                        <span class="price">65.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Chân Gà Rút Xương Sả Tắc', 65000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 3 -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=500&q=80" alt="Trà Sữa Trân Châu">
+                </div>
+                <div class="card-info">
+                    <h3>Trà Sữa Trân Châu Đường Đen</h3>
+                    <p>Đậm vị trà, béo vị sữa cùng trân châu dẻo dai ngọt ngào.</p>
+                    <div class="price-action">
+                        <span class="price">30.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Trà Sữa Trân Châu Đường Đen', 30000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 4 -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80" alt="Xoài Dầm Mắm Đường">
+                </div>
+                <div class="card-info">
+                    <h3>Xoài Keo Dầm Mắm Đường</h3>
+                    <p>Xoài giòn rụm kết hợp nước mắm đường ớt cay bùng vị.</p>
+                    <div class="price-action">
+                        <span class="price">20.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Xoài Keo Dầm Mắm Đường', 20000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 5 (MỚI THÊM) -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <span class="badge new">Mới</span>
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=500&q=80" alt="Cút Lết Xào Me">
+                </div>
+                <div class="card-info">
+                    <h3>Cút Lết Xào Me Đậm Đà</h3>
+                    <p>Trứng cút chiên giòn áo đều lớp sốt me chua ngọt, hành phi thơm lừng.</p>
+                    <div class="price-action">
+                        <span class="price">35.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Cút Lết Xào Me Đậm Đà', 35000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 6 (MỚI THÊM) -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=80" alt="Khoai Tây Chiên">
+                </div>
+                <div class="card-info">
+                    <h3>Khoai Tây Lắc Phô Mai</h3>
+                    <p>Khoai tây cắt miếng chiên vàng giòn rụm, phủ bột phô mai đậm vị.</p>
+                    <div class="price-action">
+                        <span class="price">30.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Khoai Tây Lắc Phô Mai', 30000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 7 (MỚI THÊM) -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <span class="badge hot">Favorite</span>
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80" alt="Bắp Xào Bơ">
+                </div>
+                <div class="card-info">
+                    <h3>Bắp Xào Bơ Tôm Khô</h3>
+                    <p>Hạt bắp ngọt thơm xào bơ thực vật béo ngậy cùng tôm khô và hành lá.</p>
+                    <div class="price-action">
+                        <span class="price">25.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Bắp Xào Bơ Tôm Khô', 25000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 8 (MỚI THÊM) -->
+            <div class="menu-card">
+                <div class="menu-card-img-wrap">
+                    <span class="badge new">Mới</span>
+                    <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=500&q=80" alt="Nem Chua Rán">
+                </div>
+                <div class="card-info">
+                    <h3>Nem Chua Rán Hà Nội</h3>
+                    <p>Nem chua tẩm bột chiên xù vàng ruộm, chấm kèm tương ớt cay ngọt.</p>
+                    <div class="price-action">
+                        <span class="price">40.000 VNĐ</span>
+                        <button class="btn-primary" onclick="addToCart('Nem Chua Rán Hà Nội', 40000)">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Liên Hệ Với Chú Mập</h2>
+            <div class="divider">✦ ✦ ✦</div>
+            <p>Gọi ngay để được ship nóng hổi tận nơi nhé!</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><strong>📍 Địa chỉ:</strong> Thành Phố Biên Hòa, Đồng Nai</p>
+                <p><strong>📞 Hotline/Zalo đặt hàng:</strong> <a href="tel:0987654321">0987654321</a></p>
+                <p><strong>⏰ Giờ mở cửa:</strong> 09:00 - 22:30 hàng ngày</p>
+                <p><strong>🚀 Dịch vụ:</strong> Ship siêu tốc nội thành Biên Hòa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Ăn Cùng Chú Mập - Thành Phố Biên Hòa. All rights reserved.</p>
+    </footer>
+
+    <!-- CART MODAL -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Giỏ Hàng Của Bạn</h2>
+            <div id="cartItems">
+                <p style="text-align: center; color: var(--light-text); margin-top: 20px;">Giỏ hàng của bạn đang trống.</p>
+            </div>
+            <div class="cart-total">
+                <strong>Tổng cộng: <span id="cartTotal">0</span> VNĐ</strong>
+            </div>
+            <button class="btn-primary btn-checkout" onclick="checkout()">Tiến Hành Đặt Hàng</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT GIỎ HÀNG -->
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            total += price;
+            updateCart();
+            
+            // Hiệu ứng thông báo nhỏ gọn tinh tế trên nút bấm
+            const btn = event.target;
+            const originalText = btn.innerText;
+            btn.innerText = "✓ Đã Thêm";
+            btn.style.background = "#2e7d32";
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = "";
+            }, 1000);
+        }
+
+        function updateCart() {
+            document.getElementById('cartCount').innerText = cart.length;
+            document.getElementById('cartTotal').innerText = total.toLocaleString('vi-VN');
+            
+            const cartItemsDiv = document.getElementById('cartItems');
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p style="text-align: center; color: var(--light-text); margin-top: 20px;">Giỏ hàng của bạn đang trống.</p>';
+            } else {
+                cartItemsDiv.innerHTML = cart.map(item => `
+                    <div class="cart-item-row">
+                        <span><strong>${item.name}</strong></span>
+                        <span style="color: var(--accent-color); font-weight: bold;">${item.price.toLocaleString('vi-VN')} VNĐ</span>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Đóng/Mở Modal Giỏ hàng
+        const modal = document.getElementById('cartModal');
+        document.getElementById('cartBtn').onclick = () => modal.style.display = 'flex';
+        document.getElementById('closeModal').onclick = () => modal.style.display = 'none';
+        window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Giỏ hàng của bạn đang trống!');
+                return;
+            }
+            alert(`Cảm ơn bạn đã đặt món tại Ăn Cùng Chú Mập!\nTổng tiền: ${total.toLocaleString('vi-VN')} VNĐ.\n\nNhân viên sẽ liên hệ qua số điện thoại của bạn hoặc gọi hotline 0987654321 để xác nhận giao hàng tại Biên Hòa nhé!`);
+            cart = [];
+            total = 0;
+            updateCart();
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
